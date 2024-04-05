@@ -14,6 +14,7 @@ public class HomeController {
 		log.info("index() 실행1");
 		log.info("index() 실행2");
 		log.info("index() 실행3");
+		log.info("index()3까지 정상적으로 실행됨");
 		return "home";
 	}
 }

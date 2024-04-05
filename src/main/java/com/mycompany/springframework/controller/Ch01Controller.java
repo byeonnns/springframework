@@ -12,11 +12,6 @@ public class Ch01Controller {
 	@RequestMapping("")
 	public String index() {
 		log.info("index() 실행");
-<<<<<<< HEAD
-		log.info("index() 실행이 정상적으로 작동됨");
-=======
-		log.info("index() 실행2");
->>>>>>> branch 'master' of https://github.com/byeonnns/springframework.git
 		return "ch01/index";
 	}
 }

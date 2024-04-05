@@ -12,6 +12,7 @@ public class Ch01Controller {
 	@RequestMapping("")
 	public String index() {
 		log.info("index() 실행");
+		log.info("index() 실행2");
 		return "ch01/index";
 	}
 }

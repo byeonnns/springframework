@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Insert title here</title>
 		
-				<!-- Bootstrap 5를 위한 외부 라이브러리 설정 -->
+		<!-- Bootstrap 5를 위한 외부 라이브러리 설정 -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		
@@ -20,11 +20,25 @@
 	</head>
 	
 	<body>
-		<div class="card">
-		    <div class="card-header">Header</div>
-		    <div class="card-body">
-				content
-			</div> 
+		<div class="d-flex flex-column vh-100">
+			<%@ include file="/WEB-INF/views/common/header.jsp"%>
+			<div class="flex-grow-1 m-2">
+				<div class="d-flex row">
+					<div class="col-md-4">
+						<%@ include file="/WEB-INF/views/common/menu.jsp"%>
+					</div>
+					
+					<div class="col-md-8">
+						<!-- ############################################ -->
+						<div class="card">
+							<div class="card-header">home</div>
+							<div class="card-body"></div>
+								content
+						</div>
+						<!-- ########################################## -->
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

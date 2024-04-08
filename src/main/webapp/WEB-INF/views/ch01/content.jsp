@@ -15,18 +15,30 @@
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 		
 		<!-- 사용자 정의 자바스크립트 -->
-		<script>
-			
-		</script>
+		
 		
 	</head>
 	
 	<body>
-		<div class="card">
-		    <div class="card-header">Header</div>
-		    <div class="card-body">
-				content
-			</div> 
+		<div class="d-flex flex-column vh-100">
+			<%@ include file="/WEB-INF/views/common/header.jsp"%>
+			<div class="flex-grow-1 m-2">
+				<div class="d-flex row">
+					<div class="col-md-4">
+						<%@ include file="/WEB-INF/views/common/menu.jsp"%>
+					</div>
+					
+					<div class="col-md-8">
+						<!-- ############################################ -->
+						<div class="card">
+							<div class="card-header">content</div>
+							<div class="card-body"></div>
+								content
+						</div>
+						<!-- ########################################## -->
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

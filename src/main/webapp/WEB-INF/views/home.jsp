@@ -1,3 +1,4 @@
+<%-- page 지시자 : page 서버(WAS, Tomcat)에서 jsp를 해석하는 방법을 기술 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,11 +22,14 @@
 	
 	<body>
 		<div class="d-flex flex-column vh-100">
+			
+			<%-- include 지시자는 소스 코드 복사 붙여넣기의 개념 --%>
 			<%@ include file="/WEB-INF/views/common/header.jsp"%>
 			<div class="flex-grow-1 m-2">
 				<div class="d-flex row">
 					<div class="col-md-4">
-						<%@ include file="/WEB-INF/views/common/menu.jsp"%>
+						<%-- include 액션은 외부에서 실행하고 결과만 삽입 --%>
+						<jsp:include page="/WEB-INF/views/common/menu.jsp"></jsp:include>
 					</div>
 					
 					<div class="col-md-8">

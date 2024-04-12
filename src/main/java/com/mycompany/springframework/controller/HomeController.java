@@ -11,13 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 public class HomeController {
 	@RequestMapping("")
 	public String index() {
-		log.info("index() 실행1");
-		log.info("index() 실행2");
-		log.info("index() 실행3");
-		log.info("index()3까지 정상적으로 실행됨");
-		log.info("index() 실행1 종료");
-		log.info("index() 실행2 종료");
-		log.info("index() 실행3 종료");
+		log.info("index() 실행");
 		return "home";
 	}
 }

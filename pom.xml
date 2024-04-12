@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mycompany</groupId>
   <artifactId>springframework</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>war</packaging>
   
     <!-- 프로젝트가 사용하는 외부 의존 라이브러리 -->
@@ -56,8 +56,13 @@
 	    <artifactId>spring-webmvc</artifactId>
 	    <version>5.3.33</version>
 	</dependency>
-	
-	
+
+	<!-- JSON 라이브러리 사용 -->	
+	<dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>20240303</version>
+	</dependency>
 	
   </dependencies>
   

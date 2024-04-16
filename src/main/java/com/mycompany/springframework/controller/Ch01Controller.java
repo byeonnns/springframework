@@ -19,9 +19,9 @@ public class Ch01Controller {
 		return "ch01/content";
 	}*/
 	@RequestMapping("/content")
-	public String content(String chNum, Model model) {
+	public String content(Model model) {
 		log.info("content() 실행");
-		model.addAttribute("chNum" + chNum);
+		model.addAttribute("chNum", "ch01");
 		return "ch01/content";
 	}
 }

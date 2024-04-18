@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -31,9 +32,27 @@
               <div class="col-md-8">
                  <!-- ###################################### -->
 				<div class="card">
-					<div class="card-header">applicationData</div>
-					<div class="card-body">                        
-						<p>방문자 수 : ${counter}</p>
+					<div class="card-header">로그인 양식</div>
+					<div class="card-body"> 
+						<c:if test="${login=='success'}">
+							<a href="sessionLogout" class="btn btn-danger btn-sm">로그아웃</a>
+						</c:if>     
+						
+						<c:if test="${login!='success'}">                  
+							<form class="m-2" method="post" action="sessionLogin">
+								<div class="form-group mb-2">
+									<label for="mid">아이디</label>
+									<input type="text" class="form-control" id="mid" name="mid" value="${ch04LoginForm.mid}">
+								</div>
+								
+								<div class="form-group mb-2">
+									<label for="mpassword">비밀번호</label>
+									<input type="password" class="form-control" id="mpassword" name="mpassword" value="${ch04LoginForm.mpassword}">
+								</div>
+								<!-- form 태그 안에 있는 button 태그는 기본적으로 type="submit"를 가진다. -->
+								<button type="submit" class="btn btn-success btn-sm">로그인</button>
+							</form>	
+						</c:if>  		
 					</div>
 				</div>
                  <!-- ###################################### -->

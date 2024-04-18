@@ -26,6 +26,18 @@
       <param-value>classpath:spring/dispatcher/*.xml</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
+    
+    <!-- multipart/form-data를 해석하기 위한 설정 -->
+    <multipart-config>
+    	<!-- 임시 파일이 저장될 폴더의 절대 경로만 가능 -->
+    	<location>C:/Temp</location>
+    	<!-- 파일 하나당 크기를 제한 -->
+    	<max-file-size>20971520</max-file-size>
+    	<!-- 한 번에 올릴 수 있는 파일 갯수를 제한 -> 3개면 총 3개의 크기를 제한 -->
+    	<max-request-size>104857600</max-request-size>
+    	<!-- 임시 파일로 저장해야 할 파일의 크기 지정 (요청 처리가 끝나면 임시 파일 삭제) -->
+    	<file-size-threshold>1024</file-size-threshold>
+    </multipart-config>
   </servlet>
   <servlet-mapping>
     <servlet-name>DispatcherServlet</servlet-name>

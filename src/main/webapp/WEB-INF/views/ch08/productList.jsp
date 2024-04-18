@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
    <head>
@@ -31,9 +32,26 @@
               <div class="col-md-8">
                  <!-- ###################################### -->
 				<div class="card">
-					<div class="card-header">applicationData</div>
+					<div class="card-header">상품 목록</div>
 					<div class="card-body">                        
-						<p>방문자 수 : ${counter}</p>
+						<table class="table table-striped border">
+						    <thead class="table-warning">
+						      <tr>
+						        <th>번호</th>
+						        <th>상품명</th>
+						        <th>가격</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						    	<c:forEach var="product" items="${productList}">
+							      <tr>
+							        <td>${product.pno}</td>
+							        <td><a href="detailView?pno=${product.pno}">${product.pname}</a></td>
+							        <td>${product.pprice}</td>
+							      </tr>
+						    	</c:forEach>
+						    </tbody>
+						 </table>
 					</div>
 				</div>
                  <!-- ###################################### -->

@@ -60,8 +60,20 @@
    		 <property name="defaultTargetUrl" value="/ch17/loginForm"></property>
    </bean>
    
-   <!-- 요청 URL 권한 설정 방법2 -->
-	<!-- 클래스 또는 메소드에 @Secured("ROLE_ADMIN")을 붙일 수 있도록 설정 -->
+    <!-- 요청 URL 권한 설정 방법2 -->
+	<!-- 
+	   요청 URL 권한 설정 방법2
+	   클래스 또는 메소드에 @Secured("ROLE_ADMIN")을 붙일 수 있도록 설정
+	   [의존 설정]
+	   1)14_aop.xml: <aop:aspectj-autoproxy/>
+	   2)pom.xml: 
+	   <dependency>
+	      <groupId>org.aspectj</groupId>
+	      <artifactId>aspectjweaver</artifactId>
+	      <version>1.9.19</version>
+	      <scope>runtime</scope>
+	   </dependency>
+	-->	
    <security:global-method-security secured-annotations="enabled"/>
    
    <!-- 인증 관리자 설정(아이디와 패스워드를 DB와 비교해서 로그인 처리 관리) -->
